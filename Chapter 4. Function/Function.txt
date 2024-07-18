@@ -1,4 +1,7 @@
 
 
-Function
+function
 
+function expression
+
+arrow function

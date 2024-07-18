@@ -1,0 +1,38 @@
+1. Scope와 Execution Context와 Closure는 밀접한 관련이 있다.
+
+Scope는 변수와 함수의 접근 범위를 결정한다.
+이 접근 범위는 무엇에 의해 결정되는가? Execution Context?
+
+2. Scope를 이해하기 위해서 Execution Context를 기반으로 이해 해야한다.
+
+스코프는 코드 작성 시점에 결정되며
+
+Scope
+코드 작성 시점에 결정
+
+Execution Context
+실행 시점에 결정
+Scope,
+- 스코프 체인을 통해 변수와 함수에 접근
+
+
+Closure 
+closure는 lexical scope를 캡쳐해서(저장해서) 결과값을 활용한다.
+- 코드 작성 시점에 결정
+
+
+Closure는 Execution Context와 관련이 있는가?
+
+Function을 만드는 3가지 
+function, function expression, arrow function
+이중 function expression과 arrow function은 Closure를 기반으로 한다.
+
+
+그리고 이들에 따라 this binding이 달라지는게 큰 차이점인데...
+
+이건 인프런 강의 들으면 되겠따..ㅋㅋㅋ
+
+
+this 바인딩은 JavaScript에서 주로 실행 컨텍스트(Execution Context)에 의해 결정됩니다.
+실행 컨텍스트는 함수 호출 방식에 따라 this가 가리키는 객체를 결정합니다. 
+
