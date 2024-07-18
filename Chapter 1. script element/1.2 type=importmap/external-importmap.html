@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>importmap - module type - script | Hardcore JS</title>
+    <script type="importmap">
+    {
+        "imports": {
+        "lodash": "https://cdn.jsdelivr.net/npm/lodash@4.17.21/+esm"
+        }
+    }
+    </script>    
+    <script type="module">
+        import _ from 'lodash';
+
+        console.log(_.upperCase('hello'));
+    </script>
+</head>
+<body>
+    Hello World
+</body>
+</html>
