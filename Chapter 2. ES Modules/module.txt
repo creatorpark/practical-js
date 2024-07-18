@@ -1,0 +1,5 @@
+ES Module
+https://velog.io/@yoonlang/ES-Module%EC%97%90-%EB%8C%80%ED%95%B4
+
+
+type=module은 기본적으로 defer로 실행된다.
