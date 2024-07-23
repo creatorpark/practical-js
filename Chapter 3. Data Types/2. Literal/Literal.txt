@@ -1,0 +1,47 @@
+// 숫자 리터럴
+let intLiteral = 42;
+let floatLiteral = 3.14;
+let hexLiteral = 0x2A;  // 16진수 42
+let octalLiteral = 0o52; // 8진수 42
+let binaryLiteral = 0b101010; // 2진수 42
+
+// 문자열 리터럴
+let singleQuoteStr = 'Hello';
+let doubleQuoteStr = "World";
+let templateStr = `Hello, ${singleQuoteStr}!`;
+
+// 불리언 리터럴
+let trueLiteral = true;
+let falseLiteral = false;
+
+// 객체 리터럴
+let person = {
+    name: "John",
+    age: 30
+};
+
+// 배열 리터럴
+let fruits = ["apple", "banana", "cherry"];
+
+// 함수 리터럴
+let greet = function() {
+    return "Hello!";
+};
+let arrowGreet = () => "Hello!";
+
+// 정규 표현식 리터럴
+let regex = /ab+c/;
+
+// Null 리터럴
+let nullVar = null;
+
+// Undefined 리터럴
+let undefinedVar = undefined;
+
+// BigInt 리터럴
+let bigIntLiteral = 123n;
+
+// Symbol 리터럴
+let sym = Symbol('description');
+
+

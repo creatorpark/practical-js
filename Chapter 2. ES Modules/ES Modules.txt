@@ -1,0 +1,26 @@
+ES Module
+https://velog.io/@yoonlang/ES-Module%EC%97%90-%EB%8C%80%ED%95%B4
+
+tree shaking 으로 번들 사이즈 줄이기
+https://web.dev/articles/reduce-javascript-payloads-with-tree-shaking
+
+Lodash로 알아보는 번들 사이즈 최적화
+https://velog.io/@katej927/Webpack-Bundle-%EC%82%AC%EC%9D%B4%EC%A6%88-%EC%A4%84%EC%9D%B4%EB%8A%94-lodash-import-%EB%B0%A9%EB%B2%95
+
+
+ES Module로 알아봐야 하는 것.
+1. type=module로 했을 때 변화
+2. 모듈 사이즈 줄이기
+3. lazy loading 개념이 존재하는가?
+ - 내가 해당 javascript을 호출하는 시점에 로딩해서 가져오는 것.
+ https://learnvue.co/articles/lazy-load-components
+ - Vue에서는 Async Component를 제공한다.ㅋㅋㅋ
+
+이를 통해 에디터 같은 것을 만들 때 자주 사용하지 않는 /code 같은 action에 대해서
+해당 기능을 Dynamic하게 가져와서 활용할 수 있따.
+ㅋㅋㅋㅋ
+화면 로딩시 첫페이지에 필요한 일부 기능만 넣고 나머지는 Lazy Loading으로 가져온다.
+
+결론, ESM을 활용한
+1. 모듈 사이즈 최적화
+2. Lazy Loading을 통한 기능 최적화

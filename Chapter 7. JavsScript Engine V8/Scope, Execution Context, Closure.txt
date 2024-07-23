@@ -36,3 +36,6 @@ function, function expression, arrow function
 this 바인딩은 JavaScript에서 주로 실행 컨텍스트(Execution Context)에 의해 결정됩니다.
 실행 컨텍스트는 함수 호출 방식에 따라 this가 가리키는 객체를 결정합니다. 
 
+
+
+https://gamguma.dev/post/2022/04/js_execution_context

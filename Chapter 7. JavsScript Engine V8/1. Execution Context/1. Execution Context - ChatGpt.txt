@@ -1,0 +1,24 @@
+1. Execution Context
+- Java의 Stack Frames
+JavaScript 코드가 어떻게 실행되는지
+변수가 어떻게 평가되고 함수가 호출될 때의 환경을 정의합니다. 
+
+Kinds
+- Global Execution Context 
+: 자바 스크립트가 최초로 실행 될 때 생성
+- Function Execution Context 
+: 함수가 호출될 때마다 생성
+- Eval Execution Context
+: eval 함수가 호출될 때 생성
+
+
+주요 객체
+Variable Object 
+- 함수의 매개변수, 변수 선언, 함수 선언
+
+Scope Chain
+- 현재 실행 컨텍스트와 상위 실행 컨텍스트의 변수 객체를 참조
+
+this Binding
+- this가 가리키는 값을 설정
+

@@ -1,0 +1,4 @@
+
+prototype과 class
+https://medium.com/@devjohnpark/javascript%EC%9D%98-prototype%EA%B3%BC-class-21669d31a35f
+
