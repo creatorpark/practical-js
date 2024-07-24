@@ -36,6 +36,9 @@ https://astexplorer.net/
 
 2. Ignition (Interpreter)
 -> to ByteCode
+https://v8.dev/docs/ignition
+
+
 https://v8.dev/blog/ignition-interpreter
 https://www.alibabacloud.com/blog/javascript-bytecode-v8-ignition-instructions_599188
 

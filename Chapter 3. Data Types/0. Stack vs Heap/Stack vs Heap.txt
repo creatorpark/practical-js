@@ -1,17 +1,21 @@
 javascript에서 stack과 heap 메모리에 각각 할당되는 타입을 설명해줘.
 
-스택 메모리는 고정된 크기의 데이터를 저장하는 데 사용됩니다. 주로 함수 호출, 기본 데이터 타입(원시 타입) 및 참조(Reference) 값을 저장합니다. 스택은 LIFO(Last In, First Out) 구조를 가지며, 매우 빠른 속도로 접근할 수 있습니다.
+스택 메모리는 고정된 크기의 데이터를 저장하는 데 사용됩니다. 
+주로 함수 호출, 
+기본 데이터 타입(원시 타입)
+
 
 1. 스택에 저장되는 데이터 타입
 
 A. 원시 타입 (Primitive Types)
 - number
+- bigint
 - string
 - boolean
 - undefined
 - null
 - symbol
-- bigint
+- 
 
 B. 함수 호출의 컨텍스트
 - 함수 호출 시 생성되는 실행 컨텍스트

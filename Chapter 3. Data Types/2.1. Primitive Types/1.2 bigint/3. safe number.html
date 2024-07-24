@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bigint - Primitive - Data Types | Hardcore JS</title>
+</head>
+<body>
+    <script>
+        const maxJavaLong = 9223372036854775807;
+
+        // 큰숫자는 문자열로 만든다.
+        const correct = BigInt("9223372036854775807");
+        console.log(correct);
+        console.log(correct instanceof Number);
+        
+        // 큰숫자를 숫자로 만들면 정밀도 문제가 생긴다.
+        // 입력에서 문제가 생긴다.
+        const inCorrect = BigInt(9223372036854775807);
+        console.log(inCorrect);
+
+        // primitive type의 safeinteger와
+        // number object의 safeinteeger 크기는 같다.
+
+        // Number.MAX_SAFE_INTEGER
+    </script>
+</body>
+</html>

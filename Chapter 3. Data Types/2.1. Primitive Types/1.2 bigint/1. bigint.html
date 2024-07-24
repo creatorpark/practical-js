@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bigint - Primitive - Data Types | Hardcore JS</title>
+</head>
+<body>
+    <script>
+        const bigPrimitive = BigInt("9223372036854775807");
+        console.log(bigPrimitive);
+        console.log(bigPrimitive instanceof BigInt);
+
+        const bigObj = new BigInt("9223372036854775807");
+        console.log(bigObj);
+        console.log(bigObj instanceof BigInt);
+    </script>
+</body>
+</html>

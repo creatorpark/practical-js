@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>string - Primitive - Data Types | Hardcore JS</title>
+</head>
+<body>
+    <script>
+        const str = "Hello"; // true로 평가됨
+        if(str) { // 조건문에서는 true/false로만 평가됨.
+            console.log(`str은 true 입니다.`);
+        }
+        
+        // 문자열과 불리언 값을 비교할 때, 문자열을 숫자로 변환
+        console.log(str == true);
+        // str은 숫자로 변환을 시도하고 숫자가 아니기 때문에 NaN이 된다.
+        // 그리고 NaN == true는 false이다.
+
+        let strNum = "1";
+        console.log(strNum == true);
+        strNum = "0";
+        console.log(strNum == false);
+        strNum = "";
+        console.log(strNum == false);
+        console.log(strNum === false);
+    </script>
+</body>
+</html>

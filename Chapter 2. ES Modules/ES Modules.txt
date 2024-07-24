@@ -15,11 +15,8 @@ ES Module로 알아봐야 하는 것.
  - 내가 해당 javascript을 호출하는 시점에 로딩해서 가져오는 것.
  https://learnvue.co/articles/lazy-load-components
  - Vue에서는 Async Component를 제공한다.ㅋㅋㅋ
-
-이를 통해 에디터 같은 것을 만들 때 자주 사용하지 않는 /code 같은 action에 대해서
-해당 기능을 Dynamic하게 가져와서 활용할 수 있따.
-ㅋㅋㅋㅋ
-화면 로딩시 첫페이지에 필요한 일부 기능만 넣고 나머지는 Lazy Loading으로 가져온다.
+- 이를 통해 에디터의 경우 /code 같은 action을 다이나믹하게 할 수 있따.
+- 화면 로딩시 첫페이지에 필요한 일부 기능만 넣고 나머지는 Lazy Loading으로 가져온다.
 
 결론, ESM을 활용한
 1. 모듈 사이즈 최적화

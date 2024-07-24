@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolean - Primitive - Data Types | Hardcore JS</title>
+</head>
+<body>
+    <script>
+        const obj = {}; // 모든 객체는 true로 평가됨
+
+        if (obj) {
+            console.log('obj는 true입니다');
+        } else {
+            console.log('obj는 false입니다');
+        }
+
+        // 비교문에서 객체는 숫자로 변환 시도될 때 
+        // 안되면 NaN으로 변환
+        console.log(obj == true);
+        console.log(obj == false);
+        
+    </script>
+</body>
+</html>

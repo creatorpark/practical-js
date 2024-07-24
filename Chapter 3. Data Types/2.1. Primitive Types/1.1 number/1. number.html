@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>number - Primitive - Data Types | Hardcore JS</title>
+</head>
+<body>
+    <script>
+        // Number Literal : 가장 많이 사용
+        const numLiteral = 123456789;
+        console.log(typeof numLiteral);
+        console.log(numLiteral instanceof Number);
+
+        // Number Constructor : 주로 다른 데이터 타입을 숫자로 변환할 때 사용
+        // primitive type
+        // in Stack
+        const numString = Number("123456789"); 
+        console.log(typeof numString);
+        console.log(numString instanceof Number);
+
+        // Object type
+        // in Heap
+        const numObj = new Number("123456789"); 
+        console.log(typeof numObj);
+        console.log(numObj instanceof Number);
+    </script>
+</body>
+</html>

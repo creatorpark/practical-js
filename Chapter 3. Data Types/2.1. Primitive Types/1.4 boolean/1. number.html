@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolean - Primitive - Data Types | Hardcore JS</title>
+</head>
+<body>
+    <script>
+        const num1 = 42;
+        if (num1) {
+            console.log('num1은 true입니다');
+        }
+
+        const num2 = 0;
+        if (num2 == false) {
+            console.log('num2은 false입니다');
+        }
+
+        // NaN은 고유한 속성 때문에 어떤 값과도 같지 않다고 평가된다.
+        console.log(NaN == false); // false
+        console.log(NaN === false); // false
+        console.log(NaN == NaN); // false
+        console.log(NaN === NaN); // false
+        console.log(Number.isNaN(num3));
+    </script>
+</body>
+</html>
