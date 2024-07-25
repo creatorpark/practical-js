@@ -1,0 +1,12 @@
+http://latentflip.com/loupe/?c
+보면
+
+소스 코드 
+call stack, 
+web apis
+callback queue
+event loop
+에 관련된 간단한 설명이 나온다.
+
+
+
