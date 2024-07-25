@@ -1,0 +1,15 @@
+1. JavaScript performance
+- 실제 자바스크립트에 관련된 performance
+
+
+
+
+
+---- 이 이하는 다음에 강의
+2. Vue performance
+
+3. React performance
+
+
+
+https://ponyfoo.com/articles/javascript-performance-pitfalls-v8

@@ -1,0 +1,45 @@
+1. 이 JavaScript 메모리 상태를 볼 수 있는 크롬 도구가 있을까?
+크롬 개발자 도구 Memory Tab이 있다. 여기서 전체 메모리 사용량을 볼 수 있다.
+이 메모리 는 Heap Memory를 보는 것이다.
+
+primitive와 object를 2개 넣어놓고 
+확인해보면 Number로 검색했을 때 obejct만 이 메모리 공간에서 볼 수 있다.
+
+
+1. 여기서는 메모리 할당 했을 때 얼마나 사용하나.
+2. 기본적으로 아무것도안했을 때 메모리 사용량이 얼마나
+
+
+
+
+질문
+let a; 에 undefined 하는 것과 다르게
+const undefinedArray = new Array(1).fill(undefined);
+처럼 Array에 undefined를 할 경우 메모리를 사용하는 이유는?
+
+질문 2)
+let a;
+const undefinedArray = new Array(1).fill(undefined);
+
+
+undefined vs null
+1. undefined 
+- Primitive = undefined // Stack에 값이 undefined로 설정.
+- Object = undefined // Stack에 값이 undefined로 설정. Heap 위치를 가리키지 않음.
+
+실제로는 비할당 값들(undefined)은 
+Javascript 엔진이 효율적인 관리를 의해 
+내부 자료구조에서 관리됨.
+
+undefined: 변수가 값이 할당되지 않았음을 나타냄.
+null: 객체 참조가 의도적으로 없음을 나타냄.
+메모리 사용:
+undefined: 내부 표현 방식으로 인해 메모리 발자국이 최소화됩니다.
+null: 스택에 힙의 빈 위치를 가리키는 참조를 생성합니다.
+
+
+2. null
+- null = Stack에 참조가 만들어 졌으나 그 참조가 가리키는 Heap의 메모리 주소는 
+Empty Location 이다.
+
+

@@ -1,3 +1,13 @@
+
+0. stack vs heap 차이 이해
+- primitive - Execution Context에 직접 할당
+- Object - Execution Context에 참조(실제 Heap에 값이 위치한 Address) 할당.
+
+0.1 그래서 Object는 접근시
+Heap은 접근 할 수 없다는 Excetion이 날 수 있음.
+주소로 갔는데 주소에 값이 없네?
+
+
 javascript에서 stack과 heap 메모리에 각각 할당되는 타입을 설명해줘.
 
 스택 메모리는 고정된 크기의 데이터를 저장하는 데 사용됩니다. 
@@ -15,7 +25,6 @@ A. 원시 타입 (Primitive Types)
 - undefined
 - null
 - symbol
-- 
 
 B. 함수 호출의 컨텍스트
 - 함수 호출 시 생성되는 실행 컨텍스트
@@ -31,7 +40,6 @@ function foo() {
 // foo 함수는 힙에 저장된 함수 객체를 가리키는 참조를 가짐
 console.log(foo()); // 30
 
-
 [질문] a = 10, b = 20;
 이라고 했을 때 a,b 도 메모리를 차지하고
 10, 20 값도 메모리를 차지해?
@@ -42,6 +50,9 @@ console.log(foo()); // 30
 Stack에 저장되는 값
 함수 참조(변수 foo)
 지역 변수(a와 b)
+---> 내가 몰랐던 부분은 Code 부분도 메모리에 올라가지
+---> 얘는 Fetch 해오는 지점이 다르고
+---> Stored Programming에서 저장을 위해(현재의 실시간 상황 데이터) 메모리를 사용한다.
 
 
 ---------------
@@ -51,12 +62,7 @@ Stack에 저장되는 값
 힙에 저장되는 데이터 타입
 
 객체 (Objects)
-- 일반 객체
-- 배열
+- Object, Array, Function, Date, Error, RegExp
+- Heap 
 - 함수 객체(코드와 클로저 정보 포함)
-  예: function foo() { ... }의 함수 객체
-- Date, RegExp 등 내장 객체
-
-foo 변수는 함수 객체를 가리키는 참조입니다. 
-이 참조는 스택에 저장되며, 힙에 있는 실제 함수 객체를 가리킵니다.
 

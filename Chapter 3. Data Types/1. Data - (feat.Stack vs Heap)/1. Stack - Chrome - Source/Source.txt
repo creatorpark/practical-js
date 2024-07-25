@@ -1,0 +1,51 @@
+1. Debugging 하는 법
+- 디버거 찍고 그 때 상태의 Call Stack 알 수 있따.
+- Execution Context에 대해 알 수 있따.
+2. 
+Global Context
+Eval Context
+Module Context
+각각 상황을 알 수 있다.
+
+
+그래서 이들의 관계가 엮였을 때 이해도를 높일 수 있다.
+- 
+
+Execution Context에서 알아야 하는 것. 
+1. Execution Context 구조들 
+- Scope Chain
+- this
+- Args
+- Return???
+
+2. Execution Context와 Heap 표현되는 것들의 차이.
+- primitive , Heap
+- return 결과
+- 값에 따른 결과, 함수 객체... 얘를 모라고 하냐...
+- Lexical Scope인가? 얘는 어디서 나타날까? Execution Context겠네.
+
+
+그렇다면, 여러 어려운 것들은 Heap아니라 이 Execution Context에 관한 것들이다
+
+3. 대부분이 Execution Context에 관한 것들이라면...
+
+4. 그다음 연결 지점은 
+Tick, setTimeout 등에 관련된 것
+Event Loop와 
+
+a. 이것도 결국 Stack에 관련된 것일 듯...
+b. Web Apis에 관련된 것도 이 Source에 관련된 것일 듯...
+
+
+-----------------------------
+Q.1 Execution Context간의 통신?은 어떻게 하지?
+return, scope Chain
+Q1.1 이게 일어났을 때, 소스에서의 차이는?
+
+
+Q.2 즉시 메모리 사용량... 맘대로 해도 된다.
+- 이건 JS YouTube에 나옴
+
+Q2.1
+- 그러다가 넘치면 어떻게 하지? Stack Overflow 만드는 법
+

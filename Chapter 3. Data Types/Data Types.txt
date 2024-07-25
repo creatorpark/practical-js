@@ -1,59 +1,14 @@
-1. 할당 - 비할당
--> 메모리
+1.1 type operator
+- Stack에 직접 할당되는 primitive는 type은 
+- 자료구조가 Stack이고 그 Stack 하나 하나당의 Element를 Execution Context라고 부른다.
+- Execution Context를 실제 Dump에서 보면 어떨까?
+이게 type of랑 instnaceof에 어떤 영향을 미칠까?
 
-2. 접근
-->
+오늘은 일단 
+이 Stack과 Execution Context의 관계를 파악
+직접할당한다는게 메모리 덤프로 어떻게 달라지는지 확인
+typeof랑 instnaceOf 연산자가 dump에서 어떻게 들어나는지 확인.
 
-3. type 
+1.2 instanceof
 
-4. instanceof
-
-질문
-let a; 에 undefined 하는 것과 다르게
-const undefinedArray = new Array(1).fill(undefined);
-처럼 Array에 undefined를 할 경우 메모리를 사용하는 이유는?
-
-질문 2)
-let a;
-const undefinedArray = new Array(1).fill(undefined);
-
-
-
-undefined vs null
-1. undefined 
-- Primitive = undefined // Stack에 값이 undefined로 설정.
-- Object = undefined // Stack에 값이 undefined로 설정. Heap 위치를 가리키지 않음.
-
-실제로는 비할당 값들(undefined)은 
-Javascript 엔진이 효율적인 관리를 의해 
-내부 자료구조에서 관리됨.
-
-undefined: 변수가 값이 할당되지 않았음을 나타냄.
-null: 객체 참조가 의도적으로 없음을 나타냄.
-메모리 사용:
-undefined: 내부 표현 방식으로 인해 메모리 발자국이 최소화됩니다.
-null: 스택에 힙의 빈 위치를 가리키는 참조를 생성합니다.
-
-
-2. null
-- null = Stack에 참조가 만들어 졌으나 그 참조가 가리키는 Heap의 메모리 주소는 
-Empty Location 이다.
-
-
-
-2. Object Types
-- Object, Array, Function, Date, Error, RegExp
-- Heap 
-
-
-
-
-2. 
-이 JavaScript 메모리 상태를 볼 수 있는 크롬 도구가 있을까?
-크롬 개발자 도구 Memory Tab이 있다. 여기서 전체 메모리 사용량을 볼 수 있다.
-마이리얼트립이 메모리 사용량이 적네. 멋지네.
-
-
-
-Symbol은 메모리 최적화 목적이 아니다.
-https://it-eldorado.tistory.com/149
+Expression vs 비교문
