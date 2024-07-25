@@ -1,0 +1,20 @@
+1. Module Performance
+Performance와 연결되서는 무엇...?
+- ESM을 사용해서 
+- lodash-es
+- d3js-es
+세팅하기.ㅋㅋㅋ
+
+*** 번들 사이즈 비교법
+
+2. Async Performance
+
+
+- async load
+lazy loading 
+- dynamic loading 
+
+Q. 순수 ESM만으로 async loading을 지원하나?
+
+
+https://ponyfoo.com/articles/javascript-performance-pitfalls-v8

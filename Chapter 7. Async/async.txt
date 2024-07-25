@@ -1,0 +1,7 @@
+async, await 문법
+
+언제 사용하는가
+
+이거 사용할 때 영향을 미치는 것은 Call Stack
+그러므로 Source Tab에서 이거 보는 법을 보여준다.ㅋㅋㅋ
+

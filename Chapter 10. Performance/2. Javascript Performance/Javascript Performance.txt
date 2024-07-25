@@ -1,0 +1,6 @@
+1. JavaScript performance
+- primitive vs object performance
+- 불변성이 성능에 미치는 영향???
+
+2. 실제 Tips
+
