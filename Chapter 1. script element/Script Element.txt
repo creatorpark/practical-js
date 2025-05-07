@@ -1,4 +1,0 @@
-script loading 방법
-1. classic, type 구분
-2. async, defer로 비동기적으로 모듈만 가져오기.
-
