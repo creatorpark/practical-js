@@ -1,0 +1,13 @@
+여기서는 
+
+react에서 VDOM을 구현하는 방식과
+Vue에서 VDOM을 구현하는 방식의 차이 근본적으로 
+이게 어떤 HTML을 문법을 이용해 구현하는지 정리
+
+createFragment
+
+
+***
+핵심 React.js와 Vue.js 소스 보는 법
+
+
