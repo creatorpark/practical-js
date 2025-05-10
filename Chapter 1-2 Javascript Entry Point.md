@@ -1,4 +1,7 @@
-# Chapter 1, 2
+## Chapter 1, 2
+- JavaScript 진입점 -> script
+- JavaScript 분할 로딩 -> module
+
 
 script element와 ES Module의 관계를 정리
 그리고 이 둘이 연결되는 지점을 정리
@@ -8,9 +11,9 @@ script element와 ES Module의 관계를 정리
 
 1. WebPack이나 다른 번들러로 비교
  -  lodash-es vs lodash
-3. 털기 등등
+2. 털기 등등
 
-4. Lazy Loading
+3. Lazy Loading
 
 Chapter 1, 2를 배우고 나서 연결되는 지점을 통해 확인하면서 개념을 완벽히 정리
 
