@@ -1,6 +1,9 @@
-script loading 방법
-1. classic, type 구분
-2. async, defer로 비동기적으로 모듈만 가져오기.
+HTML script element에 관한 내용
+- 종류 비교
+
+성능은 실제 ES Modules에서 
+
+import/exportㄹㄹ
 
 
 이게 나중에 

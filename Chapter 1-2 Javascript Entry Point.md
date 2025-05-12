@@ -2,12 +2,10 @@
 - JavaScript 진입점 -> script
 - JavaScript 분할 로딩 -> module
 
+script element와 ES Module의 관계
+-> HTML Element vs JavaScript Grammar
 
-script element와 ES Module의 관계를 정리
-그리고 이 둘이 연결되는 지점을 정리
--> 이미 어느정도 정리 되었는데 
 
--> 최종적으로 
 
 1. WebPack이나 다른 번들러로 비교
  -  lodash-es vs lodash

@@ -1,3 +1,20 @@
+ECMAJavaScropt Modules
+- Chapter 1은 HTML에서 Module을 로딩하기 위한 방법
+- 실제 Module에서 사용하는 문법을 다룬다.
+
+import / export
+
+- 기존 classic과 차이점
+- Bunding 하면서
+
+compile time의 비교
+(용량 사이즈 감소)
+
+runtime 에서의 비교
+- lazy loading
+
+
+
 ES Module
 https://velog.io/@yoonlang/ES-Module%EC%97%90-%EB%8C%80%ED%95%B4
 
