@@ -1,0 +1,33 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope - V8 | Practical JS</title>
+<script>
+// A. Global Scope
+class Person {
+    // B. Local Scope
+    static species = "Homo sapiens"; // 정적 필드
+    #secret = "private field";       // 비공개 필드
+
+    constructor(name, age) {
+        this.name = name; // 인스턴스 필드
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello, my name is ${this.name}`);
+    }
+    // B. Local Scope
+}
+
+const p = new Person("Alice", 30);
+p.greet();
+console.log("Person's species :", Person.species);
+// A. Global Scope
+</script>    
+</head>
+<body>
+    Catch block
+</body>
+</html>

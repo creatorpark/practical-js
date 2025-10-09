@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viewport Demo</title>
+  <style>
+    html, body {
+      margin: 0;
+      height: 100%;
+      overflow: hidden;
+      font-family: sans-serif;
+      background-color: #f3f4f6;
+    }
+
+    /* CSS viewport 단위 확인용 박스 */
+    .viewport-box {
+      width: 50vw;   /* 뷰포트 너비의 50% */
+      height: 50vh;  /* 뷰포트 높이의 50% */
+      background-color: #60a5fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      margin: 2vh auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+    }
+
+    /* Viewport info 영역 */
+    .info {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 2vh;
+    }
+
+    @media (orientation: landscape) {
+      body {
+        background-color: red; /* 가로모드에서 색상 변경 */
+      }
+    }
+
+    @media (min-resolution: 2dppx) {
+      body {
+        border: 4px dashed #f59e0b; /* 고해상도 기기 표시 */
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="viewport-box" id="box">
+    50vw × 50vh
+  </div>
+
+  <div class="info" id="info">
+    Loading viewport info...
+  </div>
+
+  <script>
+    const box = document.getElementById('box');
+    const info = document.getElementById('info');
+
+    function updateViewportInfo() {
+      const width = window.innerWidth;
+      const height = window.innerHeight;
+      const ratio = window.devicePixelRatio;
+      const orientation = screen.orientation?.type || 'unknown';
+      const visualWidth = window.visualViewport?.width.toFixed(2);
+      const visualHeight = window.visualViewport?.height.toFixed(2);
+
+      info.innerHTML = `
+        <strong>window.innerWidth:</strong> ${width}px<br>
+        <strong>window.innerHeight:</strong> ${height}px<br>
+        <strong>devicePixelRatio:</strong> ${ratio}<br>
+        <strong>orientation:</strong> ${orientation}<br>
+        <strong>visualViewport:</strong> ${visualWidth} × ${visualHeight}<br>
+        <em>(리사이즈나 회전 시 자동 갱신됨)</em>
+      `;
+    }
+
+    // 초기값 표시
+    updateViewportInfo();
+
+    // 리사이즈 및 orientation 변화 감지
+    window.addEventListener('resize', updateViewportInfo);
+    window.visualViewport?.addEventListener('resize', updateViewportInfo);
+  </script>
+</body>
+</html>

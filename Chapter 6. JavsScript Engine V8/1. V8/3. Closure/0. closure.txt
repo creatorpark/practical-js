@@ -1,0 +1,94 @@
+좋습니다 👍 이제 JavaScript에서 말하는 "캡처(capture)"를 정리해 볼게요.
+
+JS는 기본적으로 **싱글 스레드** + **이벤트 루프 모델**이기 때문에,
+C#/Kotlin처럼 "스레드/디스패처 컨텍스트 캡처"가 중요한 건 아니고,
+대신 **클로저(closure)와 실행 컨텍스트(Execution Context)** 에서 일어나는 **스택 프레임 보존**이 핵심이에요.
+
+---
+
+# 🔎 JavaScript에서의 Capture
+
+## 1. 실행 컨텍스트(Execution Context)와 클로저 Capture
+
+* JS의 함수가 실행될 때는 **실행 컨텍스트(Execution Context)** 가 만들어집니다.
+* 함수 안에서 바깥 스코프 변수를 참조하면, JS 엔진은 그 변수를 **Heap에 올려 보존**해서 나중에도 접근 가능하게 해줍니다.
+  → 이게 바로 **클로저 캡처(closure capture)**.
+
+### 예시
+
+```js
+function outer() {
+  let count = 0;
+  return function inner() {
+    count++;
+    return count;
+  };
+}
+const inc = outer();
+console.log(inc()); // 1
+console.log(inc()); // 2
+```
+
+* `count`는 이미 outer()의 호출 스택은 끝났는데도 `inner`에서 **캡처**돼서 살아있습니다.
+
+---
+
+## 2. 비동기와 Capture
+
+JS는 싱글 스레드라 **await/Promise**의 재개도 결국 이벤트 루프에서 스케줄링됩니다.
+이때 중요한 건 “`await` 이전의 스택 프레임과 지역 변수를 어떻게 보존할까?” → 답은 **클로저 기반 캡처**입니다.
+
+### async/await 예시
+
+```js
+async function foo() {
+  let x = 10;
+  await new Promise(r => setTimeout(r, 1000));
+  return x * 2;
+}
+```
+
+* `await`에서 함수는 “멈춘 것처럼” 보이지만, 실제로는 **Promise.then**에 continuation이 등록됨.
+* 이 continuation(익명 함수)이 `x`를 **클로저로 캡처**해서, 타이머가 끝났을 때 다시 계산할 수 있음.
+* 즉, **스택 프레임은 사라져도 필요한 변수는 클로저를 통해 살아있음**.
+
+---
+
+## 3. JavaScript Capture의 특징
+
+1. **스레드/디스패처 캡처 없음**
+
+   * JS는 싱글 스레드 이벤트 루프만 있으므로, C#처럼 UI 컨텍스트 복귀를 고민하지 않아도 됨.
+2. **클로저 캡처가 핵심**
+
+   * await 이전의 변수 상태를 continuation이 잡아두고, 이벤트 루프에서 실행할 때 복원.
+3. **Continuation은 Promise.then 형태**
+
+   * async/await는 사실 `Promise.then`의 문법 설탕.
+   * 이때 `then` 콜백이 필요한 변수를 캡처.
+
+---
+
+## 4. 구조적 문제 해결과 한계
+
+* **해결**:
+
+  * 콜백 지옥 → `async/await` 문법으로 동기처럼 작성.
+  * 상태 저장 → 클로저로 자동 캡처.
+* **한계**:
+
+  * JS는 **구조적 동시성(Structured Concurrency)** 같은 건 없음.
+  * 에러 전파도 기본은 Promise rejection 기반 → 잡히지 않으면 전역 에러로 튀어나감.
+  * 취소 모델도 표준화 늦음(AbortController가 근래에야 자리잡음).
+
+---
+
+# ✅ 요약
+
+* JavaScript에서 말하는 **캡처** = 주로 **클로저를 통한 스택 프레임/변수 보존**.
+* 싱글 스레드 환경이라 **스레드/컨텍스트 캡처**는 불필요.
+* async/await가 “동기처럼 보이지만 비동기”로 동작하는 비밀은 **Promise.then 콜백이 변수들을 클로저로 캡처해 두는 것**에 있음.
+
+---
+
+👉 원하시면 제가 \*\*“콜백 vs Promise vs async/await”\*\*로 같은 로직을 비교하면서, 각각에서 어떤 “캡처”가 일어나는지 그림처럼 풀어드릴까요?

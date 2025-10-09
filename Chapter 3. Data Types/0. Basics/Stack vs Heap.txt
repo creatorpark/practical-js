@@ -4,9 +4,8 @@
 - Object - Execution Context에 참조(실제 Heap에 값이 위치한 Address) 할당.
 
 0.1 그래서 Object는 접근시
-Heap은 접근 할 수 없다는 Excetion이 날 수 있음.
+Heap은 접근 할 수 없다는 Exception이 날 수 있음.
 주소로 갔는데 주소에 값이 없네?
-
 
 javascript에서 stack과 heap 메모리에 각각 할당되는 타입을 설명해줘.
 

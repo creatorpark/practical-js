@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope - V8 | Practical JS</title>
+<script>
+    // Scope(Global, Script)
+
+    // Global Scope : legacy variables (window에서 확인 가능)
+    function a_function(a) { return a * 2; }
+    var a_var = 'var-global';
+
+    // Script Scope    
+    class A_Class { static x = 10; p = 1; m(){ return this.p; } }
+    const a_const = 'const-global';
+    let a_let = 'let-global';
+
+</script>    
+</head>
+<body>
+    Global, Script
+</body>
+</html>

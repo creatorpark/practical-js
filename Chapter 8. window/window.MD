@@ -1,7 +1,3 @@
-다음은 **Chapter 7: window**의 개요를 Chapter 6 (JavaScript Engine V8)과 자연스럽게 연결되도록 설계한 구조입니다.
-
----
-
 # Chapter 7: `window` – 브라우저의 전역 객체
 
 ## 🎯 학습 목표
@@ -85,8 +81,3 @@ console.log(window.document === document); // true
 * `window`는 브라우저에서의 전역 객체이며, JavaScript가 실행되는 **컨텍스트이자 API의 진입점**
 * document, location, timer, history 등 브라우저의 모든 주요 기능을 포함한다
 * 이후 DOM 조작이나 비동기 프로그래밍에서 반드시 이해되어야 하는 핵심
-
----
-
-이 구조로 Chapter 7을 시작하면, 자연스럽게 Chapter 8(DOM)으로 이어지고, 그 이전의 V8에서 학습한 개념과도 유기적으로 연결됩니다.
-필요하시면 위 내용을 바탕으로 실제 텍스트 문서 파일 또는 템플릿 디렉토리 구성도 만들어드릴 수 있어요. 원하시나요?

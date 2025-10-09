@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope - V8 | Practical JS</title>
+<script>
+// A. Global Scope    
+    console.log(a_func(5, 7));
+
+    function a_func(a, b) {
+        // B. Local Scope
+        console.log("FEC arguments:", arguments); 
+        console.log("FEC this:", this);
+        console.log("scope in function");
+        return a + b;
+        // B. Local Scope
+    }
+// A. Global Scope
+</script>    
+</head>
+<body>
+    Catch block
+</body>
+</html>

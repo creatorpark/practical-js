@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execution Context - V8 | Practical JS</title>
+<script>
+    
+    // Break point
+    console.log(a_func(5, 7));
+
+    function a_func(a, b) {
+        console.log("FEC arguments:", arguments); 
+        console.log("FEC this:", this); 
+        return a + b;
+    }
+
+</script>    
+</head>
+<body>
+    Function Execution Context
+</body>
+</html>

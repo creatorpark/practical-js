@@ -1,25 +1,16 @@
 Scope
-- 변수나 함수의 접근 범위.
+
 1. Global Object
 - 전역에서 접근 가능
 - 대표적으로 window
-
 
 Global로 접근 가능하지만, 
 Accross the Page
 - navigation, window
 
-Browser에서 객체로 만들어서 제공되는 
-Math, Date
-
 Page Only
 - screen, document, location(현재 위치)
 
-
-
-2. Module
-- 모듈 내에서만 접근 가능
-- 모듈 및 캡슐화
 
 
 스코프 이해의 중요성
