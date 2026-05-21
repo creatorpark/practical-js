@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>V8 Event Loop Cycle</title>
+</head>
+<body>
+  <h2>V8 Event Loop Demo</h2>
+  <button id="run">Run Cycle</button>
+
+  <script>
+    document.getElementById('run').addEventListener('click', () => {
+      console.log('----------------------------')
+      console.log('[user] click → start')
+
+      // 1. Call Stack (동기 실행)
+      console.log('[call stack] immediate synchronous code')
+
+      // 2. Microtask Queue (Promise, queueMicrotask)
+      Promise.resolve().then(() => {
+        console.log('[microtask] Promise.then()')
+      })
+
+      queueMicrotask(() => {
+        console.log('[microtask] queueMicrotask()')
+      })
+
+      // MutationObserver도 microtask에서 동작
+      const moTarget = document.createElement('div')
+      new MutationObserver(() => {
+        console.log('[microtask] MutationObserver callback')
+      }).observe(moTarget, { attributes: true })
+      moTarget.setAttribute('data', 'x')
+
+      // 3. Animation Frame
+      requestAnimationFrame(() => {
+        console.log('[animation frame] requestAnimationFrame()')
+      })
+
+      // 4. setTimeout (Macro task)
+      setTimeout(() => {
+        console.log('[macro task] setTimeout(0)')
+      }, 0)
+
+      // 5. MessageChannel (준-microtask)
+      const channel = new MessageChannel()
+      channel.port1.onmessage = () => {
+        console.log('[microtask-like] MessageChannel.onmessage')
+      }
+      channel.port2.postMessage(null)
+
+      // 6. Idle Callback (렌더 후 남는 시간)
+      requestIdleCallback(() => {
+        console.log('[idle callback] requestIdleCallback()')
+      })
+
+      console.log('[user] click handler end (call stack 종료)')
+    })
+  </script>
+</body>
+</html>
